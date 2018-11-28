@@ -1,4 +1,4 @@
-"""superMarkerList URL Configuration
+"""usuarios URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/
@@ -14,16 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from superMarkerList import views
-from perfiles import views as perfilView
-
+from django.urls import path
+from perfiles.views import BienvenidaView
+from perfiles.views import SignUpView
+from perfiles.views import SignInView
+from perfiles.views import SignOutView
+#from perfiles.views import SignUpView, BienvenidaView
 urlpatterns = [
-     # Todas las url de productos
-    path('producto/', include('producto.urls')),
-    path('login/', perfilView.logeaUsuario.as_view() ), 
-    path('register/', perfilView.creaCuenta.as_view() ),  
-    
     path('admin/', admin.site.urls),
-    path('', views.inicio ),
+    path('', BienvenidaView.as_view(), name='bienvenida'),
+    path('registrate/', SignUpView.as_view(), name='sign_up'),
+    path('incia-sesion/', SignInView.as_view(), name='sign_in'),
+    path('cerrar-sesion/', SignOutView.as_view(), name='sign_out'),
 ]
