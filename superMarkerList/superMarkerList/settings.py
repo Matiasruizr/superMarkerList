@@ -38,6 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',   
     'perfiles',
+<<<<<<< HEAD
+    'tienda',
+=======
+    'producto'
+>>>>>>> cfac0eab67a348b8635c446e65ed0ba828615515
 ]
 
 

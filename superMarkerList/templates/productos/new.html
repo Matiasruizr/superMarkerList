@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block container %}
+{% load static %}
+
+  
+        <div class="container-fluid">
+
+          <!-- Breadcrumbs-->
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="#">Productos</a>
+            </li>
+            <li class="breadcrumb-item active">Todos los productos</li>
+          </ol>
+            <div class="jumbotron">
+                <h1>No tienes permiso para estar aqu</h1> 
+                {% comment %} <p>¡Tenemos una base de datos detallada con más de 20 productos!</p> {% endcomment %}
+                <img src="{% static 'img/supermercado.jpg' %}" style="width:50%"/>
+     
+            </div>
+          
+       
+
+          <!-- DataTables Example -->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fas fa-table"></i>
+              Sí tienes permiso para estar aquí</div>
+            <div class="card-body">
+              <div class="table-responsive">
+        
+              </div>
+            </div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+{% endblock %}
+   

@@ -4,4 +4,5 @@ from producto import views as vistasProducto
 
 urlpatterns = [
     path('productos/', vistasProducto.inicio),
+    path('productos/new', vistasProducto.new),
 ]

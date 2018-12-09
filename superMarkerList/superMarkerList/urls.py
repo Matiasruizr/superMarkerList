@@ -27,6 +27,7 @@ from django.urls import reverse_lazy
 urlpatterns = [
      # Todas las url de productos
     path('producto/', include('producto.urls')),
+    
     path('admin/', admin.site.urls),
     path('', views.inicio, name='home'),
     path('bienvenido/', BienvenidaView.as_view(), name='bienvenida'), 
@@ -52,7 +53,7 @@ urlpatterns = [
     ),
 
     path(
-        'password/recovery/',
+        'password/recovery/     ',
         auth_views.PasswordResetConfirmView.as_view(
             success_url=reverse_lazy('home'),
             post_reset_login=True,
