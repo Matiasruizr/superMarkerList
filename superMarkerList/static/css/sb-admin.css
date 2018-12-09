@@ -373,3 +373,22 @@ body.sidebar-toggled footer.sticky-footer {
     width: calc(100% - 90px);
   }
 }
+/*cjdsbkn  COMENTARIO PAARA LA EDICION DEL LI DEL COMENTARIO DEL PASSWORD*/
+.card-login   form ul li {
+  display: none;    
+} 
+
+.card-login .helptext {
+  display: none;  
+}
+
+.card-login{
+  margin-bottom: 90px;
+}
+/* ediccion de tamano de fotos*/
+
+.card-body{
+  width: auto;
+  padding-right: 100px;
+  margin: 10px
+}

@@ -55,7 +55,7 @@ urlpatterns = [
     ),
 
     path(
-        'password/recovery/',
+        'password/recovery/     ',
         auth_views.PasswordResetConfirmView.as_view(
             success_url=reverse_lazy('home'),
             post_reset_login=True,
