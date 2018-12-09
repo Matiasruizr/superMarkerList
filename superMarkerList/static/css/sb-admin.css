@@ -385,3 +385,10 @@ body.sidebar-toggled footer.sticky-footer {
 .card-login{
   margin-bottom: 90px;
 }
+/* ediccion de tamano de fotos*/
+
+.card-body{
+  width: auto;
+  padding-right: 100px;
+  margin: 10px
+}
