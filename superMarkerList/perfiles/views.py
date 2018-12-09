@@ -8,11 +8,11 @@ from django.contrib.auth.views import LoginView, LogoutView
 class SignOutView(LogoutView):
     pass
 
-class logeaUsuario(LoginView):
-    template_name = 'perfiles/iniciar_sesion.html'
+class SignInView(LoginView):
+    template_name = 'perfiles/login.html'
 
 
-class creaCuenta(CreateView):
+class SignUpView(CreateView):
     model = Perfil
     form_class = SignUpForm
 
@@ -27,5 +27,9 @@ class creaCuenta(CreateView):
         login(self.request, usuario)
         return redirect('/')
 
+
+
+
 class BienvenidaView(TemplateView):
-   template_name = 'perfiles/bienvenida.html'
+   template_name = 'perfiles/register.html'
+     
