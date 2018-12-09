@@ -19,22 +19,14 @@
                 <img src="{% static 'img/supermercado.jpg' %}" style="width:50%"/>
      
             </div>
-          
+              <form method="POST" class="post-form">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="save btn btn-default">Save</button>
+            </form>
        
 
           <!-- DataTables Example -->
-          <div class="card mb-3">
-            <div class="card-header">
-              <i class="fas fa-table"></i>
-              Sí tienes permiso para estar aquí</div>
-            <div class="card-body">
-              <div class="table-responsive">
         
-              </div>
-            </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-          </div>
-
         </div>
         <!-- /.container-fluid -->
 

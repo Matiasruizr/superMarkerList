@@ -19,6 +19,7 @@ from superMarkerList import views
 from perfiles.views import SignUpView
 from perfiles.views import SignInView
 from perfiles.views import SignOutView,BienvenidaView
+from producto.views import SignUpViewP
 from django.contrib.auth import views as auth_views
 from django.urls import reverse_lazy
 
@@ -34,6 +35,7 @@ urlpatterns = [
     path('registrate/', SignUpView.as_view(), name='sign_up'),
     path('iniciar-sesion/', SignInView.as_view(), name='sign_in'),
     path('cerrar-sesion/', SignOutView.as_view(), name='sign_out'),
+    path('productos/new', SignUpViewP.as_view(),name='producto'),
 
      path(
         'password/recovery/',
