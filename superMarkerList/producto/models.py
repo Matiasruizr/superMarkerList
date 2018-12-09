@@ -5,7 +5,7 @@ from django import forms
 # Create your models here.
 
 
-class Product(models.Model):
+class Producto(models.Model):
     # id_producto = models.CharField(max_length=200)
     nombre_producto = models.CharField(max_length=200)
     costo_presupuestado = models.IntegerField(default=0)
