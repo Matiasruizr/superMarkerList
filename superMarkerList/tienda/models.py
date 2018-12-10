@@ -9,7 +9,7 @@ class Tienda(models.Model):
     nombre = models.CharField(max_length=200)
     ubicacion = models.CharField(max_length=200)
     ciudad = models.CharField(max_length=200)
-    aprobado =  models.BooleanField(default=True)
+    aprobado = models.BooleanField(default=True)
     region = (
         ('Region de Arica y Parinacota', 'Arica'),
         ('Region de Tarapaca', 'Iquique'),

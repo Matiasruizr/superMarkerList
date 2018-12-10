@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block container %}
+{% load static %}
+
+    
+
+
+    <div class="container">
+      <div class="card card-login mx-auto mt-5">
+        <div class="card-header text-center">Tiendas  </div>  
+        <form method="POST" class="text-center p-5">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" name="submit" class="btn btn-primary">
+        </form>
+
+     
+      </div>
+    </div>
+
+    
+
+{% endblock %}
+   

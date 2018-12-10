@@ -22,13 +22,12 @@ from perfiles.views import SignOutView,BienvenidaView
 from producto.views import SignUpViewP
 from django.contrib.auth import views as auth_views
 from django.urls import reverse_lazy
-
+from tienda.views import SignUpViewT
 
 
 urlpatterns = [
      # Todas las url de productos
-    path('producto/', include('producto.urls')),
-    
+    path('producto/', include('producto.urls')),   
     path('admin/', admin.site.urls),
     path('', views.inicio, name='home'),
     path('bienvenido/', BienvenidaView.as_view(), name='bienvenida'), 
@@ -36,6 +35,8 @@ urlpatterns = [
     path('iniciar-sesion/', SignInView.as_view(), name='sign_in'),
     path('cerrar-sesion/', SignOutView.as_view(), name='sign_out'),
     path('productos/new', SignUpViewP.as_view(),name='producto'),
+    path('tienda/new', SignUpViewT.as_view(),name='tienda'),
+
 
      path(
         'password/recovery/',
